@@ -1,4 +1,4 @@
-class Yamltool < Formula
+class Buildchecker < Formula
   desc "Command-line utility for reading, querying, and manipulating YAML files"
   homepage "https://gitlab.seznam.net/vojtech.stursa/tool_build_checker.git"
   license "MIT"
@@ -6,11 +6,11 @@ class Yamltool < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.9-arm64-apple-darwin.tar.gz"
-      sha256 "6b22690ac61facf955860af4ed968522d4bab0e244bdd6d2469d5c38950e7003"
+      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.10-arm64-apple-darwin.tar.gz"
+      sha256 "abe189c4a22fc6b401ca72d3d17582d41446e93404e3c86b4a7a618007954dec"
     else
-      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.9-x86_64-apple-darwin.tar.gz"
-      sha256 "1bb4f0f8b6626f13f06ac5a646996783008f24c854d0f132941a696af4d5d4f7"
+      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.10-x86_64-apple-darwin.tar.gz"
+      sha256 "3d20afb955a82eace8f411a640f377f213a5f2162c62631a479ceb09362192b1"
     end
   end
 
@@ -33,6 +33,6 @@ class Yamltool < Formula
     assert_match "Test", output
 
     # Test version
-    assert_match "v1.0.9", shell_output("#{bin}/buildchecker --version")
+    assert_match "v1.0.10", shell_output("#{bin}/buildchecker --version")
   end
 end
