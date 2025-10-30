@@ -6,11 +6,11 @@ class Buildchecker < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.36-arm64-apple-darwin.tar.gz"
-      sha256 "5bd8facefef8a884c87a5dcf4b39db60c05c5e0756052798ca80bc12bea2c7bb"
+      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.37-arm64-apple-darwin.tar.gz"
+      sha256 "44359b6f665e6f9e38416f2fcd05e4899c69ebc7441b01b3c1043b17c820d6e1"
     else
-      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.36-x86_64-apple-darwin.tar.gz"
-      sha256 "c263b70f5858987eb58460d04e5f60add3cf6e29587608598a401aa0ecd1d7a3"
+      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-v1.0.37-x86_64-apple-darwin.tar.gz"
+      sha256 "637065b665fbf4ab90d7251dd7df9b4bb5ea1ba5dce3014e4fd053eac64fbf28"
     end
   end
 
@@ -33,6 +33,6 @@ class Buildchecker < Formula
     assert_match "Test", output
 
     # Test version
-    assert_match "v1.0.36", shell_output("#{bin}/buildchecker --version")
+    assert_match "v1.0.37", shell_output("#{bin}/buildchecker --version")
   end
 end
