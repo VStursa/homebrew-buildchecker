@@ -6,11 +6,11 @@ class Buildchecker < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-1.0.54-arm64-apple-darwin.tar.gz"
-      sha256 "69faaee5760ef36b73f8debd0d72b723c084531a874f06bfe28b94f3fdab0782"
+      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-1.0.55-arm64-apple-darwin.tar.gz"
+      sha256 "baadca028831938e0e36c917bd8e190f6b376237f7009f62f15c62e561f7e8ba"
     else
-      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-1.0.54-x86_64-apple-darwin.tar.gz"
-      sha256 "f3bb475a7a8e23a4bea90372200727047c96ba099ba7d9822b3abd887314c5e5"
+      url "https://sbrowser.dev.dnsz.cz/vojtech.stursa/artefacts/buildchecker/buildchecker-1.0.55-x86_64-apple-darwin.tar.gz"
+      sha256 "e555b5bfa9d6872f773faf07f355a904a508261b5a977e7f338361b3e98b28d5"
     end
   end
 
@@ -25,7 +25,7 @@ class Buildchecker < Formula
     # that quietly dropped one should fail here rather than in someone's pipeline.
     # The in-repo equivalent, which also checks their flags, is
     # tool/Tests/CLITests/FrozenSurfaceTests.swift.
-    assert_match "1.0.54", shell_output("#{bin}/buildchecker --version")
+    assert_match "1.0.55", shell_output("#{bin}/buildchecker --version")
     help = shell_output("#{bin}/buildchecker --help")
     assert_match "checkTask", help
     assert_match "addMRComment", help
